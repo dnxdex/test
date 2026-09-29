@@ -60,6 +60,18 @@ def write_to_file():
         print("File doesnt exist")
 
 
+def append_file():
+    try:
+        file_name = input("Enter file name: \n")
+        file = open(file_name + ".txt", "at")
+        text_to_write = input("Enter text to add: \n")
+        file.write(text_to_write)
+        file.close()
+        print("File appended")
+    except FileNotFoundError:
+        print("File doesnt exist")
+
+
 while True:
     print("\n1. Check name \n"
           "2. Check age \n"
@@ -83,5 +95,7 @@ while True:
         create_file()
     elif selected_task == 6:
         write_to_file()
+    elif selected_task == 7:
+        append_file()
     else :
         exit()
