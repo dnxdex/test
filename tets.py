@@ -38,14 +38,22 @@ def set_player_data():
     print()
 
 def create_file():
-    print("h")
+    try:
+        file_name = input("Enter file name: \n")
+        file = open(file_name + ".txt","x")
+        print("File created")
+    except FileExistsError:
+        print("File already exists")
+
+
 
 while True:
     print("\n1. Check name \n"
           "2. Check age \n"
           "3. Set Player data \n"
           "4. Create custom robot \n"
-          "5. Exit \n")
+          "5. Create file \n"
+          "8. Exit \n")
     print("Enter your number for task:")
     selected_task = int(input())
     if selected_task == 1:
@@ -55,6 +63,8 @@ while True:
     elif selected_task == 3:
         set_player_data()
     elif selected_task == 4:
+        create_file()
+    elif selected_task == 5:
         create_file()
     else :
         exit()
