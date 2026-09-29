@@ -1,3 +1,4 @@
+import fileinput
 from operator import truediv
 from traceback import print_tb
 
@@ -41,10 +42,22 @@ def create_file():
     try:
         file_name = input("Enter file name: \n")
         file = open(file_name + ".txt","x")
+        file.close()
         print("File created")
     except FileExistsError:
         print("File already exists")
 
+
+def write_to_file():
+    try:
+        file_name = input("Enter file name: \n")
+        file = open(file_name + ".txt", "wt")
+        text_to_write = input("Enter text to write: \n")
+        file.write(text_to_write)
+        file.close()
+        print("File written")
+    except FileNotFoundError:
+        print("File doesnt exist")
 
 
 while True:
@@ -53,6 +66,8 @@ while True:
           "3. Set Player data \n"
           "4. Create custom robot \n"
           "5. Create file \n"
+          "6. Write file \n"
+          "7. Append file \n"
           "8. Exit \n")
     print("Enter your number for task:")
     selected_task = int(input())
@@ -66,5 +81,7 @@ while True:
         create_file()
     elif selected_task == 5:
         create_file()
+    elif selected_task == 6:
+        write_to_file()
     else :
         exit()
