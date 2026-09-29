@@ -1,3 +1,4 @@
+from operator import truediv
 from traceback import print_tb
 
 def check_name():
@@ -35,4 +36,25 @@ def set_player_data():
     for k in range(0, shield):
         print("❖", end = " ")
     print()
-    print("hello")
+
+def create_file():
+    print("h")
+
+while True:
+    print("\n1. Check name \n"
+          "2. Check age \n"
+          "3. Set Player data \n"
+          "4. Create custom robot \n"
+          "5. Exit \n")
+    print("Enter your number for task:")
+    selected_task = int(input())
+    if selected_task == 1:
+        check_name()
+    elif selected_task == 2:
+        check_age()
+    elif selected_task == 3:
+        set_player_data()
+    elif selected_task == 4:
+        create_file()
+    else :
+        exit()
