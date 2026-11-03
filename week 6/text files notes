@@ -1,0 +1,32 @@
+"r{string, variables}" raw string, doesnt include special characters /...
+
+open files function, file_variable = open()
+file types e.g open("files/demo.txt,"r")
+r = read, w = write, a = append
+
+read text from a file function, variable = file_variable.read()
+
+loop through line by line in a text file
+    for line in file_variable:
+        print(line)
+
+closes file when finished, preferred
+    with open("files/demo.txt") as f:
+        for line in f:
+            print(line.strip())
+
+writing to a file
+    string_variable = "string"
+    with open("files/demo.txt","w") as file_variable:
+        file_variable.write(string_variable)
+
+
+close file function, file_variable.close()
+
+
+csv files
+
+import csv
+files/new_demo.csv, reader = csv.reader(file_variable)
+returns a list
+when using a csv file it returns the headers, use headers = next(reader)
