@@ -1,15 +1,20 @@
 import random as rnd
 
+
 def random_number(min,max):
     num = rnd.randint(min, max)
     return num
 
+
 min = 0
 max = 0
+
+
 def get_min_max():
     min = int(input("Enter the minimum number: "))
     max = int(input("Enter the maximum number: "))
     return (min, max)
+
 
 continue_ = True
 while continue_ :
@@ -25,5 +30,5 @@ while continue_ :
             print("num too high")
         else:
             print("You have guessed the correct number")
-    if input("Continue y,n: ")!="y":
+    if input("Continue y,n: ") != "y":
         continue_ = False
