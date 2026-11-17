@@ -1,0 +1,14 @@
+pip install matplotlib
+install matplotlib as plt
+
+    pie chat
+    plt.pie(data = [], labels = labels = [])
+    plt.title = "title"
+
+    bar chart
+    plt.bar(x = ["", ""], y = [4, 2])
+        "0" markers, "-" line, "--" dashed line, ":" dotted line "r" colour red
+
+    plt.plot(data)
+    ptt.plot(data2)
+    plt.show() "shows both data on same chart"

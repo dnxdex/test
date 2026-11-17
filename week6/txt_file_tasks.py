@@ -12,3 +12,6 @@ def run():
     print("Processing...")
     cwd()
     return
+
+
+run()

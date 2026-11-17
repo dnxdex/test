@@ -13,7 +13,7 @@ max = 0
 def get_min_max():
     min = int(input("Enter the minimum number: "))
     max = int(input("Enter the maximum number: "))
-    return (min, max)
+    return min, max
 
 
 continue_ = True

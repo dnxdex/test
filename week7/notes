@@ -1,0 +1,28 @@
+data structure 2
+
+    sets use {}
+    names = {"item1", "item2"}
+
+    methods
+        names.add("item")
+
+    set theory
+        set_variable1.union(set_variable2)
+        set_variable1.intersection(set_variable2)
+        set_variable1.difference(set_variable2) \\ order matters
+
+    Dictionary also use {} but with syntax {"key":"value",...}
+
+    dict_variable[index_key] = value
+    for things in dict_variable.values()
+        print thing
+
+    json file
+        [
+        {
+            "key": "value",
+           "modules": ["item1","item2"]
+        },
+        {},
+        {}
+        ]
