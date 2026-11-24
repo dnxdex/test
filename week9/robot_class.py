@@ -10,3 +10,17 @@ class Robot:
 
     def __repr__(self):
         return f'robot(name={self.name}, age={self.age})'
+
+    def increase_age(self):
+        self.age += 1
+
+    def increase_energy(self, amount):
+        self.energy += amount
+        if self.energy > 100:
+            self.energy = 100
+
+    def move(self, distance):
+        if self.energy - distance > 0:
+            self.energy -= distance
+        else:
+            self.energy = 0
