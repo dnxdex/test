@@ -1,0 +1,16 @@
+OPP
+    creating class
+class dog:
+
+ constructor "defines variable for objects"
+        def __init__(self, Name, Age):
+            self.name = Name
+            self.age = Age
+
+    creating objects in main.py
+        from file import class_name
+        dog1 = class_name()
+
+    methods
+        def bark(self):
+            return "bark=-0987654321§
